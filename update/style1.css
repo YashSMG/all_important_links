@@ -1,29 +1,50 @@
-*{
+/* *{
     font-family: "IBM Plex Sans", Helvetica, sans-serif;
-  }
-  
+  } */
+
+/* whole body fonts start */
+
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Raleway:wght@400;600&family=Roboto:wght@400;500&display=swap');
+
+body {
+  font-family: 'Roboto', sans-serif;
+}
+
+h1, h2, h3 {
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 800;
+}
+
+h4, h5, h6 {
+  font-family: 'Raleway', sans-serif;
+}
+
+blockquote, q {
+  font-family: 'Merriweather', serif;
+}
+/* whole body fonts ends*/
+
+
   body {
     padding: 0;
     margin: 0;
-  
-    
     /* background-image: url("background.jpg");
     background-repeat: no-repeat;
     background-size: cover; */
     background-image: linear-gradient(
-    290deg,
-    hsl(240deg 97% 89%) 0%,
-    hsl(303deg 52% 82%) 17%,
-    hsl(344deg 88% 84%) 31%,
-    hsl(10deg 84% 81%) 44%,
-    hsl(29deg 60% 73%) 54%,
-    hsl(56deg 33% 66%) 63%,
-    hsl(42deg 46% 65%) 71%,
-    hsl(32deg 59% 66%) 78%,
-    hsl(22deg 71% 68%) 84%,
-    hsl(12deg 81% 71%) 91%,
-    hsl(0deg 88% 74%) 100%
-  );
+      290deg,
+      hsl(240deg 97% 89%) 0%,
+      hsl(303deg 52% 82%) 17%,
+      hsl(344deg 88% 84%) 31%,
+      hsl(10deg 84% 81%) 44%,
+      hsl(29deg 60% 73%) 54%,
+      hsl(56deg 33% 66%) 63%,
+      hsl(42deg 46% 65%) 71%,
+      hsl(32deg 59% 66%) 78%,
+      hsl(22deg 71% 68%) 84%,
+      hsl(12deg 81% 71%) 91%,
+      hsl(0deg 88% 74%) 100%
+    );
   }
   
   .flex-container {
