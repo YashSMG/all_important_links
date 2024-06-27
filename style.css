@@ -1,150 +1,168 @@
-*{
+* {
   box-sizing: border-box;
-  /* margin-left: 0px;
-  margin-top: 0px; */
 }
 
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Raleway:wght@400;600&family=Roboto:wght@400;500&display=swap');
-
 body {
-  font-family: 'Roboto', sans-serif;
+  font-family: 'IBM Plex Sans', sans-serif;
   padding: 0;
   margin: 0;
   color: whitesmoke;
-  scroll-snap-type: none;
   background-image: url("img/img_grainy.jpg");
   background-repeat: no-repeat;
   background-size: cover;
 }
 
+/* Headings Styles */
 h1, h2, h3 {
-  font-family: 'Montserrat', sans-serif;
-  font-weight: 800;
+  font-family: 'IBM Plex Sans', sans-serif;
+  font-weight: 700;
 }
 
-h4, h5, h6 {
-  font-family: 'Raleway', sans-serif;
-}
-
-blockquote, q {
-  font-family: 'Merriweather', serif;
-}
-
-
-
-.main{
+/* General Section Styles */
+.main {
   margin-top: 50px;
 }
 
-
-
-.about{
+.about {
   margin-top: 50px;
 }
 
-.about p{
+.about p {
   text-align: justify;
-  font-size: 1.2rem;
+  font-size: 1.1rem;
 }
-.about h1{
+
+.about h1 {
   margin-bottom: 40px;
 }
 
-
-
-
-.link{
-  /* margin-top: 20px; */
+/* Links Section Styles */
+.link {
   margin-left: 30px;
 }
+
+/* List Styles */
 .styled-list {
   list-style: none;
-  list-style-type : none;
-
   padding: 1.5em;
-  margin: 0;
-
-  margin: auto auto;
-  width: 100%;
+  margin: auto;
   max-width: 400px;
-
-  backdrop-filter: blur(13px) saturate(131%); 
-  -webkit-backdrop-filter: blur(13px) saturate(131%); 
-  background-color: rgba(255, 255, 255, 0.132); 
-  border-radius:  23px; 
+  backdrop-filter: blur(13px) saturate(131%);
+  -webkit-backdrop-filter: blur(13px) saturate(131%);
+  background-color: rgba(255, 255, 255, 0.132);
+  border-radius: 23px;
   border: 1px solid rgba(209, 213, 219, 0.18);
 }
 
 .styled-list > a {
   text-decoration: none;
-  color: whitesmoke; /* or whatever color you want */
-
+  color: whitesmoke;
 }
 
+/* List Item Styles */
 .styled-list li {
   transition: ease .3s;
+  border: 2px solid black;
+  margin: .5em 0;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0.5em;
+  border-radius: 10px;
+  text-align: center;
 }
 
 .styled-list li:hover {
   box-shadow: 4px 4px #4a3116;
-  margin-left: -4px -4px;
+  margin-left: -4px;
 }
 
-
-.list-item {
-  border: 2px solid black;
-  margin: .5em 0;
-  text-align: center;
-
-  display: flex;
-  flex-direction: row;
-  padding: .5em;
-
-  border-radius: 10px;
-
-
-}
-
+/* Icon Styles */
 .link-list-icon {
-  flex: 0 1;
-
   padding: .5em 1em .5em .5em;
-  margin-right: .5em;
   font-size: 22px;
-  font-weight: bold;
-  border-right: 2px solid black
+  border-right: 2px solid black;
 }
 
 .link-list-text {
-  flex: 1 0;
-  display: flex;
-  justify-content: center;
-
-  padding: .5em;
+  flex: 1;
+  padding-left: 10px;
   font-size: 22px;
-
 }
 
+/* Mobile and Tablet View Adjustments */
+@media screen and (max-width: 768px) {
+  body {
+    background-image: url("img/img_grainy_mb.jpg");
+  }
+
+  .about p {
+    font-size: 1rem;
+  }
+
+  .styled-list {
+    width: 90%;
+    padding: 1em;
+  }
+
+  .styled-list li {
+    padding: 0.5em;
+  }
+
+  .link-list-icon {
+    padding: .5em 1em .5em .5em;
+    font-size: 20px;
+  }
+
+  .link-list-text {
+    padding-left: 8px;
+    font-size: 20px;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  body {
+    background-image: url("img/img_grainy_mb.jpg");
+  }
+
+  .about p {
+    font-size: 0.5em;
+  }
+
+  .styled-list {
+    width: 100%;
+    padding: 0.8em;
+  }
+
+  .styled-list li {
+    flex-direction: column;
+    padding: 0.9em;
+    text-align: left;
+  }
+
+  .link-list-icon {
+    padding: .5em 1em .5em .5em;
+    font-size: 18px;
+    border: none;
+  }
+
+  .link-list-text {
+    padding-left: 0;
+    font-size: 18px;
+    margin-top: 8px;
+  }
+}
 
 @media screen and (max-width: 992px) {
   body {
-    background-image: url(img/img_grainy_mb.jpg);
+    background-image: url("img/img_grainy_mb.jpg");
   }
+
   .styled-list {
-    list-style: none;
-    list-style-type : none;
-  
-    padding: 1.5em;
-    margin: 0;
-  
-    margin: auto auto;
-    width: 100%;
-    max-width:90%;
-  
-    backdrop-filter: blur(13px) saturate(131%); 
-    -webkit-backdrop-filter: blur(13px) saturate(131%); 
-    background-color: rgba(255, 255, 255, 0.132); 
-    border-radius:  23px; 
-    border: 1px solid rgba(209, 213, 219, 0.18);
+    max-width: 90%;
+  }
+
+  .link {
+    margin-left: 0;
   }
 }
